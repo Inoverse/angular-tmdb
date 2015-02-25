@@ -1,7 +1,7 @@
 # angular-tmdb
 Angular API wrapper for TMDB.org
 
-##Containing to major modules (tmdbMovie, tmdbTV)
+##Containing two major modules (tmdbMovie, tmdbTV)
 
 ### Using
 
