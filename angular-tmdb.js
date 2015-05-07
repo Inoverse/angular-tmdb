@@ -6,7 +6,7 @@ storage.value('TMDB', {
     "IMG_URL": 'http://image.tmdb.org/'
 });
 
-storage.service('tmdbMovie', ['TMDB', function (TMDB) {
+storage.service('tmdbMovie', ['TMDB', '$http', function (TMDB, $http) {
     this.search = function (title, onSuccess, onError) {
         // Suchen nach Filmen anhand des Titels
         $http.get(TMDB.API_URL + 'search/movie?api_key=' + TMDB.API_KEY + '&search_type=ngram&query=' + title).
@@ -244,7 +244,7 @@ storage.service('tmdbMovie', ['TMDB', function (TMDB) {
     }
 }]);
 
-storage.factory('tmdbTV', ['TMDB', function (TMDB) {
+storage.factory('tmdbTV', ['TMDB', '$http', function (TMDB, $http) {
     this.setup = function (apiKey, useSSL) {
         TMDB.API_KEY = apiKey;
         if (useSSL) {
