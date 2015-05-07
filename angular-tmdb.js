@@ -218,20 +218,6 @@ var storage = angular.module('tmdb', [])
         });
     }
 
-    this.discover = function (onSuccess, onError) {
-        $http.get(TMDB.API_URL + 'discover/movie?api_key=' + TMDB.API_KEY).
-        success(function (data, status, headers, config) {
-            if (onSuccess !== undefined)
-                onSuccess(data, status, headers, config);
-        }).
-        error(function (data, status, headers, config) {
-            if (onError !== undefined)
-                onError(data, status, headers, config);
-
-            console.log(data, status, headers, config);
-        });
-    }
-
     this.setup = function (apiKey, useSSL) {
         TMDB.API_KEY = apiKey;
         if (useSSL) {
