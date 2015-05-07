@@ -1,12 +1,12 @@
-var storage = angular.module('tmdb', []);
+var storage = angular.module('tmdb', [])
 
-storage.value('TMDB', {
+.value('TMDB', {
     "API_KEY": undefined,
     "API_URL": 'http://api.themoviedb.org/3/',
     "IMG_URL": 'http://image.tmdb.org/'
-});
+})
 
-storage.service('tmdbMovie', ['TMDB', '$http', function (TMDB, $http) {
+.service('tmdbMovie', ['TMDB', '$http', function (TMDB, $http) {
     this.search = function (title, onSuccess, onError) {
         // Suchen nach Filmen anhand des Titels
         $http.get(TMDB.API_URL + 'search/movie?api_key=' + TMDB.API_KEY + '&search_type=ngram&query=' + title).
@@ -242,9 +242,9 @@ storage.service('tmdbMovie', ['TMDB', '$http', function (TMDB, $http) {
             TMDB.IMG_URL = 'http://image.tmdb.org/';
         }
     }
-}]);
+}])
 
-storage.factory('tmdbTV', ['TMDB', '$http', function (TMDB, $http) {
+.service('tmdbTV', ['TMDB', '$http', function (TMDB, $http) {
     this.setup = function (apiKey, useSSL) {
         TMDB.API_KEY = apiKey;
         if (useSSL) {
