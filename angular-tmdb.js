@@ -281,7 +281,7 @@ var storage = angular.module('tmdb', [])
                 onError(data, status, headers, config);
         });
     }
-
+    
     this.topRated = function (params, onSuccess, onError) {
         var paramString = '';
         for (var p in params) {
