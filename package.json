@@ -1,0 +1,23 @@
+{
+  "name": "angular-tmdb",
+  "version": "0.1.0",
+  "description": "Angular API wrapper for TMDB.org",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Inoverse/angular-tmdb.git"
+  },
+  "keywords": [
+    "angular",
+    "tmdb",
+    "Movies"
+  ],
+  "author": "Aaron Czichon",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Inoverse/angular-tmdb/issues"
+  },
+  "homepage": "https://github.com/Inoverse/angular-tmdb",
+  "dependencies": {
+    "angular": "1.*"
+  }
+}
