@@ -1,13 +1,19 @@
 # angular-tmdb
 Angular API wrapper for TMDB.org
 
-##Containing two major modules (tmdbMovie, tmdbTV)
+**Containing two major modules (tmdbMovie, tmdbTV)**
+
+## Install
+
+```
+$ npm install --save angular-tmdb
+```
 
 ### Using
 
 Just include the module in your index.html like:
 ```html
-<script src="anular-tmdb.min.js"></script>
+<script src="angular-tmdb.min.js"></script>
 ```
 
 Then import it into the module where you want to use it:
